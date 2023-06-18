@@ -57,8 +57,8 @@ public class Example {
             throw new NumberFormatException("Неверный формат телефона");
         }
 
-        String sex = array[5];
-        if (!sex.toLowerCase().equals("m") && !sex.toLowerCase().equals("f")) {
+        String gender = array[5];
+        if (!gender.toLowerCase().equals("m") && !gender.toLowerCase().equals("f")) {
             throw new RuntimeException("Неверно введен пол");
         }
 
@@ -69,7 +69,7 @@ public class Example {
                 fileWriter.write('\n');
             }
             fileWriter.write(String.format("%s %s %s %s %s %s", surname, name, patronymic, format.format(birthdate),
-                    phone, sex));
+                    phone, gender));
         } catch (IOException e) {
             throw new FileSystemException("Возникла ошибка при работе c файлом");
         }
